@@ -29,13 +29,19 @@ var initFunction = function () {
   });
 };
 
-// Retrieves vehicle specific data once a device has been clicked
-let clickDevice = (event, data) => {
-  if (event === "click" && data.type === "device") {
-    currVehicle = data.entity.id;
-    getData(); // gets vehicle data and writes it to page
+let clickedElement = (event, data) => {
+  if (event === "click" && data.type === "trip") {
+    document.getElementById("trip").innerHTML="<p>TEST</p>"
   } else return;
 };
+
+// Retrieves vehicle specific data once a device has been clicked
+//let clickDevice = (event, data) => {
+//  if (event === "click" && data.type === "device") {
+//   currVehicle = data.entity.id;
+//    getData(); // gets vehicle data and writes it to page
+//  } else return;
+//};
 
 // Keeps track of toggle switch state in fault section of add-in, shows appropriate list of faults
 function changeToggleState() {
