@@ -32,7 +32,8 @@ var initFunction = function () {
 let clickDevice = (event, data) => {
   console.log(data);
   if (event === "click" && data.type === "trip") {
-    document.getElementById("trip").innerHTML="<p>TEST</p>"
+    tripid=data.entity.id;
+    document.getElementById("trip").innerHTML=`Toll for trip ${tripid} is $0.99`
   } else return;
 };
 
