@@ -30,6 +30,7 @@ var initFunction = function () {
 };
 
 let clickedElement = (event, data) => {
+  console.log(data);
   if (event === "click" && data.type === "trip") {
     document.getElementById("trip").innerHTML="<p>TEST</p>"
   } else return;
