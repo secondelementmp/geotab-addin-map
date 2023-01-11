@@ -29,7 +29,7 @@ var initFunction = function () {
   });
 };
 
-let clickedElement = (event, data) => {
+let clickDevice = (event, data) => {
   console.log(data);
   if (event === "click" && data.type === "trip") {
     document.getElementById("trip").innerHTML="<p>TEST</p>"
